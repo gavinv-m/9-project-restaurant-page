@@ -105,7 +105,7 @@ nav {
 }
 
 
-nav > button {
+.navigation-button {
     background-color: #ffffff;
     border-style: none;
     font-size: 1.2rem;
