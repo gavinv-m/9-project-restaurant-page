@@ -1,4 +1,5 @@
 import './style.css';
+import menu from './menu.js';
 
 
 function createEventListener() {
@@ -19,6 +20,11 @@ function createEventListener() {
 
 
 function updateScreen(tabName = 'home') {
+
+    const functionObject = {
+
+        'menu': menu
+    };
 
     const content = document.getElementById('content');
 
@@ -51,6 +57,9 @@ function updateScreen(tabName = 'home') {
 
     else {
 
+        let functionToCall = functionObject[tabName];
+        let divToAppend =  functionToCall();
+        content.appendChild(divToAppend);
     }
 }
 

@@ -28,23 +28,6 @@ body {
 }
 
 
-#content > img {
-
-    height: 85%;
-    position: absolute;
-    width: 93%;
-}
-
-
-#content > div {
-    background-color: #ffffff;
-    height: 40%;
-    position: absolute;
-    top: 60%;
-    width: 40%;
-}
-
-
 @font-face {
     font-family: Groches;
     src: 
@@ -69,11 +52,26 @@ body {
 }
 
 
+@font-face {
+    font-family: "Signika Light";
+    src: url(assets/fonts/signika-light-webfont.woff2),
+        url(assets/fonts/signika-light-webfont.woff);
+}
+
+
 header {
     border: 3px solid #293b59;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
+}
+
+
+img[src='../src/assets/images/omelette.jpg'] {
+
+    height: 85%;
+    position: absolute;
+    width: 93%;
 }
 
 
@@ -96,6 +94,48 @@ nav > button,
 }
 
 
+.menu-container {
+
+    height: 75%;
+    width: 100%;
+
+    /* Descendants: */
+    column-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 70px;
+}
+
+
+.menu-item {
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.menu-item > img {
+
+    height: 200px;
+    width: 100%
+}
+
+
+.menu-item > p {
+
+    font-family: "Signika Light";
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+
+.menu-section { 
+    height: 100%;
+    width: 100%;
+}
+
+
 nav {
     align-items: center;
     display: flex;
@@ -115,6 +155,31 @@ nav {
 }
 
 
+.our-menu {
+    
+    height: 25%;
+    margin-bottom: 50px;
+    width: 100%;
+
+    /* Descendants: */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Manifest Heavy";
+
+    gap: 40px;
+    justify-content: center;
+
+}
+
+
+.our-menu > p {
+
+    height: 25%;
+    line-height: 2rem;
+}
+
+
 nav > button:last-child {
     background-color: #293b59;
     color: #ffffff;
@@ -127,14 +192,19 @@ nav > button:last-child {
     color: #293b59;
     font-size: 4rem;
     font-family: "Manifest Heavy";
-
 }
 
 
 .welcome-section {
+    background-color: #ffffff;
+    height: 40%;
+    position: absolute;
+    top: 60%;
+    width: 40%;
+
+    /* Descendants */
     align-items: center;
     display: grid;
-    
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
@@ -151,3 +221,4 @@ nav > button:last-child {
     height: 30%;
     width: 30%;
 }
+
