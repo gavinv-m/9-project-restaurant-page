@@ -1,5 +1,6 @@
-import './style.css';
+import about from './about.js'; 
 import menu from './menu.js';
+import './style.css';
 
 
 function createEventListener() {
@@ -23,15 +24,17 @@ function updateScreen(tabName = 'home') {
 
     const functionObject = {
 
-        'menu': menu
+        'menu': menu,
+        'about': about
     };
 
     const content = document.getElementById('content');
 
-    while (content.firstChild) {
+    while (content.firstChild && tabName !== 'reservations') {
 
         content.removeChild(content.firstChild);
     }
+    console.log(tabName);
 
     if (tabName === 'home') {
 

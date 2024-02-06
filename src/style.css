@@ -22,6 +22,67 @@ body {
 }
 
 
+.about-images {
+
+    height: 100%;
+    width: 100%;
+
+    /* Descendants */ 
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+.about-images > img {
+
+    height: 100%;
+    object-fit: cover;
+
+    width: 100%;
+}
+
+
+.about-section {
+
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+
+.about-text {
+
+    display: flex;
+    flex-direction: column;
+    font-family: "Signika Light";
+    gap: 40px;
+    padding-top: 50px;
+}
+
+
+.about-text > h1, 
+.about-text > button {
+
+    font-family: var(--font-family);
+}
+
+
+.about-text > button {
+
+    background-color: #293b59;
+    border-style: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    height: 50px;
+    width: 100px;
+}
+
+
 #content {
     padding: 50px;
     position: relative;
@@ -72,6 +133,38 @@ img[src='../src/assets/images/omelette.jpg'] {
     height: 85%;
     position: absolute;
     width: 93%;
+}
+
+
+img[src='../src/assets/images/cola-braised-ribs.jpeg'] {
+
+    grid-column: 1 / 3;
+    grid-row: 1 / -1;
+
+}
+
+
+img[src='../src/assets/images/carmy-tina.jpeg'] {
+
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    object-position: 60% 0%;
+}
+
+
+img[src='../src/assets/images/carmy-syd.jpg'] {
+
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    object-position: 80% 50%;
+}
+
+
+hr {
+
+    border: none; /* Remove the default border */
+    border-top: 2px solid #293b59; /* Add a top border with your color */
+    width: 15%;
 }
 
 
