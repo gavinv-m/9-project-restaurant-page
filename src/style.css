@@ -83,10 +83,67 @@ body {
 }
 
 
+.contact-data {
+    
+    /* Descendants: */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+
+.contact-data > input {
+
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    height: 60px;
+    padding: 0 20px;
+}
+
+
+.contact-form {
+    
+    height: 80%;
+    width: 100%;
+
+    /* Descendants: */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.contact-form > h1 {
+    
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+
+.container {
+
+    height: 100%;
+    width: 100%;
+
+    /* Descendants: */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
 #content {
     padding: 50px;
     position: relative;
 }
+
+
 
 
 @font-face {
@@ -110,6 +167,22 @@ body {
     src: 
         url(assets/fonts/gainsboroughsans-regular-webfont.woff2),
         url(assets/fonts/gainsboroughsans-regular-webfont.woff);
+}
+
+
+form {
+
+    background-color: #293b59;
+    border: none;
+    border-radius: 20px;
+    flex: 1;
+    width: 75%;
+    padding: 30px 40px;
+
+    /* Descendants: */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 
@@ -238,6 +311,14 @@ nav {
 }
 
 
+nav > button:last-child {
+    background-color: #293b59;
+    color: #ffffff;
+    height: 45%;
+    width: 20%;
+}
+
+
 .navigation-button {
     background-color: #ffffff;
     border-style: none;
@@ -273,11 +354,40 @@ nav {
 }
 
 
-nav > button:last-child {
-    background-color: #293b59;
-    color: #ffffff;
-    height: 45%;
-    width: 20%;
+textarea {
+
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    height: 150px;
+    padding: 20px 20px;
+    resize: none;
+    width: 100%;
+}
+
+
+.text-and-button {
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.text-and-button > button {
+
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    height: 50px;
+    text-align: center;
+    width: 100px;
 }
 
 

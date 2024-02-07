@@ -1,5 +1,6 @@
 import about from './about.js'; 
 import menu from './menu.js';
+import contact from './contact.js';
 import './style.css';
 
 
@@ -20,12 +21,13 @@ function createEventListener() {
 }
 
 
-function updateScreen(tabName = 'home') {
+function updateScreen(tabName = 'contact') {
 
     const functionObject = {
 
         'menu': menu,
-        'about': about
+        'about': about,
+        'contact': contact
     };
 
     const content = document.getElementById('content');
