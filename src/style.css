@@ -144,6 +144,39 @@ body {
 }
 
 
+.emailAndBtn {
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+
+.emailAndBtn > * {
+
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+}
+
+
+.emailAndBtn > input {
+
+    font-family: var(--font-family);
+    padding: 0 20px;
+    width: 75%;
+}
+
+
+.emailAndBtn > button {
+    
+    background-color: #ffffff;
+    cursor: pointer;
+    font-family: var(--font-family);
+    text-align: center;
+    width: 100px;
+}
 
 
 @font-face {
@@ -193,11 +226,44 @@ form {
 }
 
 
+.footer {
+
+    background-color: #293b59;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    margin-top: 100px;
+    padding: 40px 0px 0px 40px;
+}
+
+
+.footer > div {
+
+    color: #edf4fa;
+    font-family: "Signika Light";
+
+    /* Descendants: */
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: flex-start;
+}
+
+
+.footer-heading {
+
+    font-family: var(--font-family);
+
+}
+
+
 header {
     border: 3px solid #293b59;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
+   
 }
 
 
@@ -230,6 +296,14 @@ img[src='../src/assets/images/carmy-syd.jpg'] {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
     object-position: 80% 50%;
+}
+
+
+.information {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 

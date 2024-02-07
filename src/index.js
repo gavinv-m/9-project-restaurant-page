@@ -1,6 +1,7 @@
-import about from './about.js'; 
-import menu from './menu.js';
+import about from './about.js';
 import contact from './contact.js';
+import footer from './footer.js';
+import menu from './menu.js';
 import './style.css';
 
 
@@ -21,22 +22,28 @@ function createEventListener() {
 }
 
 
-function updateScreen(tabName = 'contact') {
+function updateScreen(tabName = 'menu') {
 
     const functionObject = {
 
-        'menu': menu,
         'about': about,
-        'contact': contact
+        'contact': contact,
+        'menu': menu
     };
 
     const content = document.getElementById('content');
+    const body = document.querySelector('body'); 
+    const footerInDom = document.querySelector('.footer');
+
+
+    if (footerInDom) body.removeChild(footerInDom);
+
 
     while (content.firstChild && tabName !== 'reservations') {
 
         content.removeChild(content.firstChild);
     }
-    console.log(tabName);
+
 
     if (tabName === 'home') {
 
@@ -57,14 +64,18 @@ function updateScreen(tabName = 'contact') {
         reserveButton.textContent = 'Reserve';
         welcomeSection.appendChild(reserveButton); 
 
-        content.appendChild(welcomeSection);       
+        content.appendChild(welcomeSection);
+        return;       
     }
 
     else {
 
-        let functionToCall = functionObject[tabName];
-        let divToAppend =  functionToCall();
-        content.appendChild(divToAppend);
+        let contentName = functionObject[tabName];
+        let contentToAppend =  contentName();
+        content.appendChild(contentToAppend);
+
+        let footerToAppend = footer();
+        body.appendChild(footerToAppend);
     }
 }
 
