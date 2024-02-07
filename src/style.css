@@ -18,7 +18,7 @@ body {
     /* Descendants: */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 8fr !important;
+    grid-template-rows: 80px 1fr !important;
 }
 
 
@@ -88,7 +88,7 @@ body {
     /* Descendants: */
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 
@@ -260,6 +260,48 @@ nav > button,
 }
 
 
+.menu-container {
+
+    height: 75%;
+    width: 100%;
+
+    /* Descendants: */
+    column-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 70px;
+}
+
+
+.menu-item {
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.menu-item > img {
+
+    height: 200px;
+    width: 100%
+}
+
+
+.menu-item > p {
+
+    font-family: "Signika Light";
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+
+.menu-section { 
+    height: 100%;
+    width: 100%;
+}
+
+
 
 nav {
     align-items: center;
@@ -285,6 +327,31 @@ nav > button:last-child {
     height: 35%;
     text-align: center;
     width: 10%;
+}
+
+
+.our-menu {
+
+    height: 25%;
+    margin-bottom: 50px;
+    width: 100%;
+
+    /* Descendants: */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Manifest Heavy";
+
+    gap: 40px;
+    justify-content: center;
+
+}
+
+
+.our-menu > p {
+
+    height: 25%;
+    line-height: 2rem;
 }
 
 
